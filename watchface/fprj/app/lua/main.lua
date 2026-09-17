@@ -5,7 +5,7 @@
 -- 2) dataman 禁用（init 调用破坏静态→Live 交接；Timer 内调用杀死刷新）
 --    → 时间用 os.date 种子 + 30s 重播
 -- 3) RGB565/I8 图片禁在 init 创建 → 500ms 一次性 Timer 回调内创建帧堆
--- 4) 帧播放：全屏 20 帧 @10fps（I8 索引色，含烘焙顶部渐变暗区）
+-- 4) 帧播放：全屏 20 帧 @10fps（RGB565——真机 Lua LVGL 仅保证 ARGB8888/RGB565；I8 模拟器可用但真机黑屏）
 local app_module = "app.tomori_penguin"
 local project_name = "TomoriPenguin"
 
