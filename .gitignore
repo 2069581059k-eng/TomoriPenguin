@@ -14,3 +14,5 @@ nul
 *.log
 .hotreload/
 mp4/
+watchface/assets-src/frames/
+watchface/assets-src/frames-v4/

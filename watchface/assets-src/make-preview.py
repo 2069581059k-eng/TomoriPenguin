@@ -53,7 +53,8 @@ d.text(((W-(bb[2]-bb[0]))//2, CY+MH-24), fc, font=ff, fill=0x5C6678)
 for (x, y, r) in [(30,300,4),(310,180,3),(120,420,4),(260,40,3),(70,120,3)]:
     d.ellipse((x, y, x+r*2, y+r*2), fill=(234,243,251,255) if r==3 else (234,243,251))
 
-# 保存设计稿 + Band 9 Pro 预览缩略图（230×328，Compiler 对 DeviceType=367 的要求）
-img.save(r"D:\AGI\TraeCode\Watchface-TomoriPenguin\watchface\assets-src\preview-design.png")
-img.resize((230, 328), Image.LANCZOS).save(r"D:\AGI\TraeCode\Watchface-TomoriPenguin\watchface\fprj\images\preview.png")
-print("preview.png saved 230x328")
+# v4 市场缩略图：全屏帧（含烘焙暗区）缩放到 230×328（DeviceType=367 要求）
+frame = Image.open(r"D:\AGI\TraeCode\Watchface-TomoriPenguin\watchface\assets-src\frames-v4\f01.png").convert("RGB")
+frame.resize((230, 328), Image.LANCZOS).save(r"D:\AGI\TraeCode\Watchface-TomoriPenguin\watchface\fprj\images\preview.png")
+img.save(r"D:\AGI\TraeCode\Watchface-TomoriPenguin\watchface\assets-src\preview-design-v3.png")
+print("preview.png saved 230x328 (v4 full-screen)")
