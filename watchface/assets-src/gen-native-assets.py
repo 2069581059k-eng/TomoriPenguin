@@ -38,31 +38,31 @@ def save(img, name):
     img.save(os.path.join(OUT, name))
     print(f"  {name} {img.size}")
 
-# 1) 时钟数字 0-9（64px Bold 近白 + 发光，画布 42×72）
-f_hero = ImageFont.truetype(FONT_BOLD, 60)
+# 1) 时钟数字 0-9（38px Medium 近白 + 轻发光，画布 26×44——轻量化，不抢企鹅戏）
+f_hero = ImageFont.truetype(FONT_REG, 38)
 for i in range(10):
-    save(render_text(str(i), f_hero, C_INK, 42, 72), f"n{i}.png")
-save(render_text(":", f_hero, C_INK, 20, 72, glow=False), "colon.png")
+    save(render_text(str(i), f_hero, C_INK, 26, 44, glow=True, glow_alpha=70), f"n{i}.png")
+save(render_text(":", f_hero, C_INK, 13, 44, glow=False), "colon.png")
 
-# 2) 日期数字 0-9（24px Regular 浅蓝灰，画布 17×28）
-f_date = ImageFont.truetype(FONT_REG, 23)
+# 2) 日期数字 0-9（15px Regular 浅蓝灰，画布 12×18）
+f_date = ImageFont.truetype(FONT_REG, 15)
 for i in range(10):
-    save(render_text(str(i), f_date, C_DIM, 17, 28, glow=False), f"d{i}.png")
+    save(render_text(str(i), f_date, C_DIM, 12, 18, glow=False), f"d{i}.png")
 
-# 3) 汉字：月 日 周（24px 浅蓝灰）
+# 3) 汉字：月 日 周（15px 浅蓝灰）
 for ch, fn in [("月", "t_month.png"), ("日", "t_day.png"), ("周", "t_week.png")]:
-    save(render_text(ch, f_date, C_DIM, 24, 28, glow=False), fn)
+    save(render_text(ch, f_date, C_DIM, 16, 18, glow=False), fn)
 
-# 4) 星期 0-6（24px 浅青，ImageList 周几帧：0=周日）
-f_week = ImageFont.truetype(FONT_REG, 23)
+# 4) 星期 0-6（15px 浅青，ImageList 周几帧：0=周日）
+f_week = ImageFont.truetype(FONT_REG, 15)
 for i, ch in enumerate(["日", "一", "二", "三", "四", "五", "六"]):
-    save(render_text(ch, f_week, C_ACCENT, 24, 28, glow=False), f"w{i}.png")
+    save(render_text(ch, f_week, C_ACCENT, 16, 18, glow=False), f"w{i}.png")
 
-# 5) 电量数字 0-9（19px 浅青，画布 14×22）+ % 符号
-f_bat = ImageFont.truetype(FONT_REG, 19)
+# 5) 电量数字 0-9（13px 浅青，画布 10×16）+ % 符号
+f_bat = ImageFont.truetype(FONT_REG, 13)
 for i in range(10):
-    save(render_text(str(i), f_bat, C_ACCENT, 14, 22, glow=False), f"b{i}.png")
-save(render_text("%", f_bat, C_ACCENT, 14, 22, glow=False), "t_pct.png")
+    save(render_text(str(i), f_bat, C_ACCENT, 10, 16, glow=False), f"b{i}.png")
+save(render_text("%", f_bat, C_ACCENT, 10, 16, glow=False), "t_pct.png")
 
 # 6) 复制 20 帧全屏背景（已烘焙 scrim 暗区）→ 转 256 色共享调色板
 #    （索引色 PNG 使 Compiler 走 rle=0x10 索引路径，体积从 9.4MB 减半到 4.9MB）

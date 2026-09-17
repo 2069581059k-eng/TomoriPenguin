@@ -38,17 +38,17 @@ xml = f'''<?xml version="1.0" encoding="utf-16"?>
 <FaceProject DeviceType="367">
 <Screen Title="TomoriPenguin" Bitmap="preview.png">
 <Widget Shape="31" Name="anim_[0@100]" X="0" Y="0" Width="336" Height="480" Alpha="255" Alignment="0" DefaultIndex="0" Index_Src="0" Spacing="0" Blanking="0" Visible_Src="0" BitmapList="{F20I}" />
-<Widget Shape="32" Name="clock_hour" X="22" Y="44" Width="42" Height="72" Alpha="255" Digits="2" Alignment="0" Value_Src="0811" Spacing="0" Blanking="0" Visible_Src="0" BitmapList="{NUM11}" />
-<Widget Shape="30" Name="clock_colon" X="104" Y="44" Width="20" Height="72" Alpha="255" Visible_Src="0" Bitmap="colon.png" />
-<Widget Shape="32" Name="clock_minute" X="122" Y="44" Width="42" Height="72" Alpha="255" Digits="2" Alignment="0" Value_Src="1011" Spacing="0" Blanking="0" Visible_Src="0" BitmapList="{NUM11}" />
-<Widget Shape="32" Name="date_month" X="22" Y="132" Width="17" Height="28" Alpha="255" Digits="2" Alignment="0" Value_Src="1012" Spacing="0" Blanking="0" Visible_Src="0" BitmapList="{DATE11}" />
-<Widget Shape="30" Name="date_t_month" X="54" Y="132" Width="24" Height="28" Alpha="255" Visible_Src="0" Bitmap="t_month.png" />
-<Widget Shape="32" Name="date_day" X="82" Y="132" Width="17" Height="28" Alpha="255" Digits="2" Alignment="0" Value_Src="1812" Spacing="0" Blanking="0" Visible_Src="0" BitmapList="{DATE11}" />
-<Widget Shape="30" Name="date_t_day" X="114" Y="132" Width="24" Height="28" Alpha="255" Visible_Src="0" Bitmap="t_day.png" />
-<Widget Shape="30" Name="date_t_week" X="148" Y="132" Width="24" Height="28" Alpha="255" Visible_Src="0" Bitmap="t_week.png" />
-<Widget Shape="31" Name="date_weekday" X="170" Y="132" Width="24" Height="28" Alpha="255" Alignment="0" DefaultIndex="0" Index_Src="2012" Spacing="0" Blanking="0" Visible_Src="0" BitmapList="{W7I}" />
-<Widget Shape="32" Name="batt_num" X="258" Y="30" Width="14" Height="22" Alpha="255" Digits="2" Alignment="0" Value_Src="0841" Spacing="0" Blanking="0" Visible_Src="0" BitmapList="{BAT11}" />
-<Widget Shape="30" Name="batt_pct" X="284" Y="30" Width="14" Height="22" Alpha="255" Visible_Src="0" Bitmap="t_pct.png" />
+<Widget Shape="32" Name="clock_hour" X="22" Y="28" Width="26" Height="44" Alpha="255" Digits="2" Alignment="0" Value_Src="0811" Spacing="0" Blanking="0" Visible_Src="0" BitmapList="{NUM11}" />
+<Widget Shape="30" Name="clock_colon" X="76" Y="28" Width="13" Height="44" Alpha="255" Visible_Src="0" Bitmap="colon.png" />
+<Widget Shape="32" Name="clock_minute" X="90" Y="28" Width="26" Height="44" Alpha="255" Digits="2" Alignment="0" Value_Src="1011" Spacing="0" Blanking="0" Visible_Src="0" BitmapList="{NUM11}" />
+<Widget Shape="32" Name="date_month" X="22" Y="78" Width="12" Height="18" Alpha="255" Digits="2" Alignment="0" Value_Src="1012" Spacing="0" Blanking="0" Visible_Src="0" BitmapList="{DATE11}" />
+<Widget Shape="30" Name="date_t_month" X="46" Y="78" Width="16" Height="18" Alpha="255" Visible_Src="0" Bitmap="t_month.png" />
+<Widget Shape="32" Name="date_day" X="66" Y="78" Width="12" Height="18" Alpha="255" Digits="2" Alignment="0" Value_Src="1812" Spacing="0" Blanking="0" Visible_Src="0" BitmapList="{DATE11}" />
+<Widget Shape="30" Name="date_t_day" X="90" Y="78" Width="16" Height="18" Alpha="255" Visible_Src="0" Bitmap="t_day.png" />
+<Widget Shape="30" Name="date_t_week" X="112" Y="78" Width="16" Height="18" Alpha="255" Visible_Src="0" Bitmap="t_week.png" />
+<Widget Shape="31" Name="date_weekday" X="128" Y="78" Width="16" Height="18" Alpha="255" Alignment="0" DefaultIndex="0" Index_Src="2012" Spacing="0" Blanking="0" Visible_Src="0" BitmapList="{W7I}" />
+<Widget Shape="32" Name="batt_num" X="280" Y="30" Width="10" Height="16" Alpha="255" Digits="2" Alignment="0" Value_Src="0841" Spacing="0" Blanking="0" Visible_Src="0" BitmapList="{BAT11}" />
+<Widget Shape="30" Name="batt_pct" X="300" Y="30" Width="10" Height="16" Alpha="255" Visible_Src="0" Bitmap="t_pct.png" />
 </Screen>
 </FaceProject>
 '''
